@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/thales/Projetos/Netflix/movieservice"/>
 			<item value="/home/thales/Documents/git/fiap-microservices-exercicios/2-gerenciamento-configuracao/cotacaoservice"/>
 			<item value="/home/thales/Documents/git/fiap-microservices-exercicios/2-gerenciamento-configuracao/configserver"/>
 			<item value="/home/thales/Projetos/Netflix/eurekaserver"/>
