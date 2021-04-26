@@ -500,3 +500,26 @@ org.eclipse.core.runtime.CoreException: Launch configuration MovieServiceApplica
 2021-04-25 08:19:00,233 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2021-04-25 08:19:00,237 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-04-25 08:19:00,237 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/thales/Projetos/Netflix/movieservice/src/test/resources
+2021-04-26 10:16:47,682 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-04-26 10:17:11,348 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-26 10:17:11,368 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-04-26 10:17:11,398 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-04-26 10:17:11,433 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-26 10:17:11,433 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/thales/Projetos/Netflix/eurekaserver/src/test/resources
+2021-04-26 10:17:15,278 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-26 10:17:15,283 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-04-26 10:17:15,285 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-26 10:17:15,297 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-26 10:17:15,297 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/thales/Projetos/Netflix/movieservice/src/test/resources
+2021-04-26 10:17:38,921 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-26 10:17:38,941 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-04-26 10:17:38,942 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-26 10:17:38,951 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-26 10:17:38,951 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/thales/Projetos/Netflix/movieservice/src/test/resources
+2021-04-26 10:18:16,922 [Worker-0: Launching Executing install in _home_thales_Projetos_Netflix_movieservice] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/thales/Projetos/Netflix/movieservice
+2021-04-26 10:18:16,924 [Worker-0: Launching Executing install in _home_thales_Projetos_Netflix_movieservice] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2021-04-26 10:18:27,382 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-26 10:18:27,383 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-04-26 10:18:27,384 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-04-26 10:18:27,392 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-26 10:18:27,392 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/thales/Projetos/Netflix/movieservice/src/test/resources
