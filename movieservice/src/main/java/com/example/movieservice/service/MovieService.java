@@ -16,5 +16,22 @@ public class MovieService {
 		Movie movie = movieRepository.findById(movieId);
 		return movie;
 	}
-
+	
+	public Movie upVote(Movie movie) {
+		movie = this.getMovie(movie.getId());
+		double currentLikes = movie.getLikes();
+		currentLikes++;
+		movie.setLikes(currentLikes);
+		movieRepository.save(movie);
+		return movie;
+	}
+	
+	public Movie downVote(Movie movie) {
+		movie = this.getMovie(movie.getId());
+		double currentLikes = movie.getLikes();
+		currentLikes--;
+		movie.setLikes(currentLikes);
+		movieRepository.save(movie);
+		return movie;
+	}
 }

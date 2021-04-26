@@ -14,8 +14,11 @@ public class Movie {
 	@JsonProperty("id")
 	private int id;
 
-	@JsonProperty("price")
-	private double price;
+	@JsonProperty("likes")
+	private double likes;
+	
+	@JsonProperty("views")
+	private double views;
 
 	@JsonProperty("description")
 	private String description;
@@ -24,10 +27,10 @@ public class Movie {
 		
 	}
 	
-	public Movie(int id, double price, String description) {
+	public Movie(int id, double likes, String description) {
 		super();
 		this.id = id;
-		this.price = price;
+		this.likes = likes;
 		this.description = description;
 	}
 
@@ -39,12 +42,12 @@ public class Movie {
 		this.id = id;
 	}
 
-	public double getPrice() {
-		return price;
+	public double getLikes() {
+		return likes;
 	}
 
-	public void setPrice(double price) {
-		this.price = price;
+	public void setLikes(double likes) {
+		this.likes = likes;
 	}
 
 	public String getDescription() {
@@ -53,6 +56,14 @@ public class Movie {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	public double getViews() {
+		return views;
+	}
+
+	public void setViews(double views) {
+		this.views = views;
 	}
 
 }
