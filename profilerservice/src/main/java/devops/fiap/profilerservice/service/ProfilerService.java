@@ -16,7 +16,6 @@ import devops.fiap.profilerservice.entity.User;
 import devops.fiap.profilerservice.entity.UserMovies;
 import devops.fiap.profilerservice.vo.ProfilerComposerVO;
 import devops.fiap.profilerservice.vo.UserMoviesVO;
-import devops.fiap.profilerservice.vo.UserWatchedMoviesVO;
 
 @Service
 public class ProfilerService {
