@@ -14,11 +14,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Git checkout
     - uses: actions/checkout@v2
+
     - name: Set up JDK 11
       uses: actions/setup-java@v2
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+
+    - name: Build eurekaserver Maven
+      run: mvn -B /eurekaserver --file pom.xml
+
+    - name: Build movieservice Maven
+      run: mvn -B /movieservice --file pom.xml
+    
+    - name: Build userservice Maven
+      run: mvn -B /userservice --file pom.xml
