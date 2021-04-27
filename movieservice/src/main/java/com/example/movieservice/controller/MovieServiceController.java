@@ -1,5 +1,7 @@
 package com.example.movieservice.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +28,18 @@ public class MovieServiceController {
 		return movie;
 	}
 	
+	@RequestMapping(value = "/genre/{genre}", method = RequestMethod.GET)
+	public List<Movie> getMovie(@PathVariable(name = "genre") String genre) {
+		List<Movie> movies = movieService.getMoviesByGenre(genre);
+		return movies;
+	}
+	
+	@RequestMapping(value = "/mostviews/genre/{genre}", method = RequestMethod.GET)
+	public List<Movie> getMostViewedMoviesByGenre(@PathVariable(name = "genre") String genre) {
+		List<Movie> movies = movieService.getMostViewedMoviesByGenre(genre);
+		return movies;
+	}
+	
 	@RequestMapping(value = "/upvote",method = RequestMethod.PUT)
 	public ResponseEntity<?> upVote(@RequestBody Movie movie) {
 		// Parte 1.  item 13.c
@@ -37,6 +51,20 @@ public class MovieServiceController {
 	public ResponseEntity<?> downVote(@RequestBody Movie movie) {
 		// Parte 1.  item 13.c
 		movie = movieService.downVote(movie);
+		return new ResponseEntity<>(movie, HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/addview",method = RequestMethod.PUT)
+	public ResponseEntity<?> addView(@RequestBody Movie movie) {
+		// Parte 1.  item 13.c
+		movie = movieService.addView(movie);
+		return new ResponseEntity<>(movie, HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/create",method = RequestMethod.PUT)
+	public ResponseEntity<?> createMovie(@RequestBody Movie movie) {
+		// Parte 1.  item 13.c
+		movie = movieService.createMovie(movie);
 		return new ResponseEntity<>(movie, HttpStatus.OK);
 	}
 	

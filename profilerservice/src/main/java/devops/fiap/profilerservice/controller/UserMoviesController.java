@@ -43,4 +43,12 @@ public class UserMoviesController {
 		return new ResponseEntity<>(userMovies, HttpStatus.OK);
 	}
 	
+	@RequestMapping(value = "/setwatched",method = RequestMethod.PUT)
+	public ResponseEntity<?> setWatched(@RequestBody UserMovies userMovies) {
+		// Parte 1.  item 13.c
+		
+		userMovies = userMoviesService.setWatched(userMovies);
+		return new ResponseEntity<>(userMovies, HttpStatus.OK);
+	}
+	
 }

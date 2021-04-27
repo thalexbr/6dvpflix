@@ -1,9 +1,13 @@
 package devops.fiap.profilerservice.entity;
 
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,8 +15,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Table(name = "tbl_user_movies")
 public class UserMovies {
 	
-	@Id
+	/*@Id
 	@JsonProperty("id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	@JsonProperty("user_id")
@@ -21,7 +26,10 @@ public class UserMovies {
 	
 	@JsonProperty("movie_id")
 	@Column(name = "movie_id")
-	private int movieId;
+	private int movieId;*/
+	
+	@EmbeddedId
+	private UserMovieIdentity userMovieIdentity;
 	
 	@JsonProperty("liked")
 	@Column(name = "liked")
@@ -34,30 +42,16 @@ public class UserMovies {
 	@Column(name = "watch_later")
 	private boolean watchLater;
 	
-	public int getId() {
-		return id;
-	}
 	
-	public void setId(int id) {
-		this.id = id;
-	}
 	
-	public int getUserId() {
-		return userId;
+	public UserMovieIdentity getUserMovieIdentity() {
+		return userMovieIdentity;
 	}
-	
-	public void setUserId(int userId) {
-		this.userId = userId;
+
+	public void setUserMovieIdentity(UserMovieIdentity userMovieIdentity) {
+		this.userMovieIdentity = userMovieIdentity;
 	}
-	
-	public int getMovieId() {
-		return movieId;
-	}
-	
-	public void setMovieId(int movieId) {
-		this.movieId = movieId;
-	}
-	
+
 	public boolean isLike() {
 		return like;
 	}

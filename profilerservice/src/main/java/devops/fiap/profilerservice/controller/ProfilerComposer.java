@@ -20,13 +20,22 @@ import devops.fiap.profilerservice.vo.UserMoviesVO;
 @RestController
 @RequestMapping(value = "/v1/profilerservice")
 public class ProfilerComposer {
+	
+	private static final boolean ALL_MOVIES = false;
+	private static final boolean WATCHED = true;
+	
 
 	@Autowired
 	private ProfilerService profilerService;
 
 	@RequestMapping(value = "/{userId}", method = RequestMethod.GET)
 	public ProfilerComposerVO getUserMovies(@PathVariable(name = "userId") int userId) {
-		return profilerService.getProfileDetails(userId);
+		return profilerService.getProfileDetails(userId, ALL_MOVIES);
+	}
+	
+	@RequestMapping(value = "/watched/{userId}", method = RequestMethod.GET)
+	public ProfilerComposerVO getUserMoviesWatched(@PathVariable(name = "userId") int userId) {
+		return profilerService.getProfileDetails(userId, WATCHED);
 	}
 	
 

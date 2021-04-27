@@ -16,5 +16,11 @@ public class UserService {
 		User user = userRepository.findById(userId);
 		return user;
 	}
+	
+	public User createUser(User user) {
+		userRepository.save(user);
+		return user;
+		
+	}
 
 }

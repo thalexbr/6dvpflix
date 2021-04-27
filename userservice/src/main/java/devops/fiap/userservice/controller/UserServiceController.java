@@ -26,6 +26,13 @@ public class UserServiceController {
 		return user;
 	}
 	
+	@RequestMapping(value = "/create",method = RequestMethod.PUT)
+	public ResponseEntity<?> createUser(@RequestBody User user) {
+		// Parte 1.  item 13.c
+		user = userService.createUser(user);
+		return new ResponseEntity<>(user, HttpStatus.OK);
+	}
+	
 	/*@RequestMapping(value = "/upvote",method = RequestMethod.PUT)
 	public ResponseEntity<?> upVote(@RequestBody User user) {
 		// Parte 1.  item 13.c
