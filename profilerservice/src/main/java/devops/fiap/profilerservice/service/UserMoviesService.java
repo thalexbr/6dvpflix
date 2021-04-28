@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import devops.fiap.profilerservice.entity.User;
+import devops.fiap.profilerservice.entity.UserMovieIdentity;
 import devops.fiap.profilerservice.entity.UserMovies;
 import devops.fiap.profilerservice.repository.UserMoviesRepository;
 
@@ -21,20 +22,44 @@ public class UserMoviesService {
 
 
 	public List<UserMovies> getUserMovies (int userId) {
-		List<UserMovies> userMovies = userMoviesRepository.findByUserId(userId);
+		List<UserMovies> userMovies = userMoviesRepository.findByUserMovieIdentityUserId(userId);
 		return userMovies;
 	}
 	
-	public UserMovies getUserMovie  (int userMovieId) {
-		UserMovies userMovies = userMoviesRepository.findById(userMovieId);
+	public UserMovies getUserMovie  (UserMovieIdentity userMovieIdentity) {
+		UserMovies userMovies = userMoviesRepository.findByUserMovieIdentity(userMovieIdentity);
 		return userMovies;
 	}
 
+	public UserMovies setWatched(UserMovies userMovies) {
+		// TODO Auto-generated method stub
+		
+		UserMovies newUserMovies = this.getUserMovie(userMovies.getUserMovieIdentity());
+		if(newUserMovies == null) {
+			System.out.println("######################SETTING UP A NEW USER MOVIE#######################");
+			userMovies.setWatched(true);
+		} else {
+			userMovies = newUserMovies;
+			userMovies.setWatched(true);
+		}
+		
+		//Enviar evento para contador de views
+		
+		userMoviesRepository.save(userMovies);
+		return userMovies;
+	}
 
 	public UserMovies toggleWatchLater(UserMovies userMovies) {
 		// TODO Auto-generated method stub
-		userMovies = this.getUserMovie(userMovies.getId());
-		userMovies.setWatchLater(!userMovies.isWatchLater());
+		
+		UserMovies newUserMovies = this.getUserMovie(userMovies.getUserMovieIdentity());
+		if(newUserMovies == null) {
+			userMovies.setWatchLater(true);
+		} else {
+			userMovies = newUserMovies;
+			userMovies.setWatchLater(!userMovies.isWatchLater());
+		}
+		
 		userMoviesRepository.save(userMovies);
 		return userMovies;
 	}
@@ -42,8 +67,14 @@ public class UserMoviesService {
 
 	public UserMovies toggleLike(UserMovies userMovies) {
 		// TODO Auto-generated method stub
-		userMovies = this.getUserMovie(userMovies.getId());
-		userMovies.setLike(!userMovies.isLike());
+		UserMovies newUserMovies = this.getUserMovie(userMovies.getUserMovieIdentity());
+		
+		if(newUserMovies == null) {
+			userMovies.setLike(true);
+		} else {
+			userMovies = newUserMovies;
+			userMovies.setLike(!userMovies.isLike());
+		}
 		
 		if(userMovies.isLike()) {
 			

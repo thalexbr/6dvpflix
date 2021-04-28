@@ -1,5 +1,7 @@
 package com.example.movieservice.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,14 @@ public class MovieService {
 	public Movie getMovie(int movieId){
 		Movie movie = movieRepository.findById(movieId);
 		return movie;
+	}
+	
+	public List<Movie> getMoviesByGenre(String genre){
+		return movieRepository.findByGenre(genre);
+	}
+	
+	public List<Movie> getMostViewedMoviesByGenre(String genre){
+		return movieRepository.findByGenreOrderByViewsDesc(genre);
 	}
 	
 	public Movie upVote(Movie movie) {
@@ -33,5 +43,23 @@ public class MovieService {
 		movie.setLikes(currentLikes);
 		movieRepository.save(movie);
 		return movie;
+	}
+	
+	public Movie addView(Movie movie) {
+		movie = this.getMovie(movie.getId());
+		double currentViews = movie.getViews();
+		movie.setViews(currentViews++);
+		movieRepository.save(movie);
+		return(movie);
+	}
+	
+	public Movie createMovie(Movie movie) {
+		
+		movie.setLikes(0);
+		movie.setViews(0);
+		movieRepository.save(movie);	
+		
+		return movie;
+		
 	}
 }

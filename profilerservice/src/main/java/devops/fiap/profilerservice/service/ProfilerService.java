@@ -27,7 +27,7 @@ public class ProfilerService {
 	private UserMoviesService userMoviesService;
 	
 
-	public ProfilerComposerVO getProfileDetails(int userId) {
+	public ProfilerComposerVO getProfileDetails(int userId, boolean filterWatched) {
 		
 		List<UserMovies> userMovies = userMoviesService.getUserMovies(userId);
 		List<UserMoviesVO> userMoviesVO = new ArrayList<>();
@@ -35,47 +35,30 @@ public class ProfilerService {
 		
 		String movieName;
 		String userName = "";
+		String description = "";
+		String genre = "";
+		
+		User user = getUser(userId);
+		
+		userName = user.getName();
 		
 		for (UserMovies userMovie : userMovies) {
-			Movie movie = getMovie(userMovie.getMovieId());
-			User user = getUser(userMovie.getUserId());
-			userName = user.getName();
-			movieName = movie.getDescription();
-			userMoviesVO.add(new UserMoviesVO(movieName, userMovie.isLike(), userMovie.isWatched(), userMovie.isWatchLater()));
+			if(filterWatched && !userMovie.isWatched()) {
+				continue;
+			}
+			Movie movie = getMovie(userMovie.getUserMovieIdentity().getMovieId());
+			movieName = movie.getName();
+			description = movie.getDescription();
+			genre = movie.getGenre();
+			userMoviesVO.add(new UserMoviesVO(movieName, description, genre, userMovie.isLike(), userMovie.isWatched(), userMovie.isWatchLater()));
 		}
 		
 		ProfilerComposerVO profilerComposerVO = new ProfilerComposerVO(userName, userMoviesVO);
 		
 		return profilerComposerVO;
-		
-	/*	Order order = profilerService.getUserMovies(orderId);
-		List<OrderLine> orderLineList = order.getOrderLineList();
-		List<OrderLineComposerVO> orderLineComposerVO = new ArrayList<>();
-		
-		for (OrderLine orderLine : orderLineList) {
-			Product product = getProduct(orderLine.getProductId());
-			orderLineComposerVO.add(new OrderLineComposerVO(orderLine.getQuantity(), orderLine.getProductId(),product.getPrice(), product.getDescription()));
-		}
-		
-		//OrderLineComposerVO orderLineComposerVO = new OrderComposerV
-		
-		
-		OrderComposerVO orderComposeVO = new OrderComposerVO();
-		if(order != null) {
-			orderComposeVO.setId(orderId);
-			orderComposeVO.setStatus(order.getStatus());
-			orderComposeVO.setTotalOrder(order.getTotalOrder());
-			Payment payment = getPayment(orderId);
-			orderComposeVO.setPaymentId(payment.getId());
-			orderComposeVO.setPaymentStatus(payment.getStatus());
-			orderComposeVO.setApprovedDate(payment.getApprovedDate());
-			orderComposeVO.setComments(payment.getComments());
-			orderComposeVO.setOrderLineComposerVO(orderLineComposerVO);
-		}
-		
-		return orderComposeVO;*/
-	}
 
+	}
+	
 	private Movie getMovie(int movieId) {
 		RestTemplate restTemplate = new RestTemplate();
 		String uri = String.format("%s/v1/movieservice/%s", getServiceInstanceURI("movieservice"), movieId);
