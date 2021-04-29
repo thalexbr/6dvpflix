@@ -1,0 +1,5 @@
+com/example/movieservice/service/MovieService.class
+com/example/movieservice/entity/Movie.class
+com/example/movieservice/controller/MovieServiceController.class
+com/example/movieservice/MovieServiceApplication.class
+com/example/movieservice/repository/MovieRepository.class
