@@ -17,6 +17,7 @@ import devops.fiap.userservice.entity.UserMovies;
 import devops.fiap.userservice.vo.ProfilerComposerVO;
 import devops.fiap.userservice.vo.UserMoviesVO;
 
+
 @Service
 public class ProfilerService {
 
@@ -58,6 +59,7 @@ public class ProfilerService {
 		return profilerComposerVO;
 
 	}
+
 	
 	private Movie getMovie(int movieId) {
 		RestTemplate restTemplate = new RestTemplate();

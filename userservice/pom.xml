@@ -9,11 +9,11 @@
 		<version>2.2.4.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>devops.fiap</groupId>
 	<artifactId>userservice</artifactId>
-	<version>0.0.0-build.26</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>userservice</name>
-	<description>User Service</description>
+	<description>6DVPFlix User Microservice</description>
 
 	<properties>
 		<java.version>1.8</java.version>

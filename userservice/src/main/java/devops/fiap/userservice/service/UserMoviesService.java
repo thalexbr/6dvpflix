@@ -1,18 +1,14 @@
 package devops.fiap.userservice.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
-import devops.fiap.userservice.entity.User;
 import devops.fiap.userservice.entity.UserMovieIdentity;
 import devops.fiap.userservice.entity.UserMovies;
 import devops.fiap.userservice.repository.UserMoviesRepository;
+
 
 @Service
 public class UserMoviesService {
@@ -36,7 +32,6 @@ public class UserMoviesService {
 		
 		UserMovies newUserMovies = this.getUserMovie(userMovies.getUserMovieIdentity());
 		if(newUserMovies == null) {
-			System.out.println("######################SETTING UP A NEW USER MOVIE#######################");
 			userMovies.setWatched(true);
 		} else {
 			userMovies = newUserMovies;
@@ -76,12 +71,11 @@ public class UserMoviesService {
 			userMovies.setLike(!userMovies.isLike());
 		}
 		
-		if(userMovies.isLike()) {
-			
-			// Enviar evento de upvote para o broker (upvote)
+		if(userMovies.isLike()) {		
+			// Enviar evento para o broker (upvote)
 		} else {
 			
-			// Enviar evento de upvote para o broker (downvote)
+			// Enviar evento para o broker (downvote)
 		}
 		
 		userMoviesRepository.save(userMovies);
@@ -90,6 +84,5 @@ public class UserMoviesService {
 		
 		return userMovies;
 	}
-	
 
 }

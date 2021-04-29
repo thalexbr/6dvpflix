@@ -1,5 +1,7 @@
 package devops.fiap.userservice.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +23,7 @@ public class UserServiceController {
 	private UserService userService;
 	
 	@RequestMapping(value = "/{userId}", method = RequestMethod.GET)
-	public User getMovie(@PathVariable(name = "userId") int userId) {
+	public User getUser(@PathVariable(name = "userId") int userId) {
 		User user = userService.getUser(userId);
 		return user;
 	}
@@ -31,6 +33,20 @@ public class UserServiceController {
 		// Parte 1.  item 13.c
 		user = userService.createUser(user);
 		return new ResponseEntity<>(user, HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/list",method = RequestMethod.GET)
+	public ResponseEntity<?> getAllUsers() {
+		// Parte 1.  item 13.c
+		List<User> users = userService.getAllUsers();
+		return new ResponseEntity<>(users, HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/create/batch",method = RequestMethod.PUT)
+	public ResponseEntity<?> batchCreate(@RequestBody List<User> users) {
+		// Parte 1.  item 13.c
+		users = userService.batchCreate(users);
+		return new ResponseEntity<>(users, HttpStatus.OK);
 	}
 	
 	/*@RequestMapping(value = "/upvote",method = RequestMethod.PUT)

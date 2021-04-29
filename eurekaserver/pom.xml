@@ -9,7 +9,7 @@
 		<version>2.2.4.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>devops.fiap</groupId>
 	<artifactId>eurekaserver</artifactId>
 	<version>0.0.0-build.26</version>
 	<name>eurekaserver</name>

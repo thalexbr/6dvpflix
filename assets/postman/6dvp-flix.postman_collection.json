@@ -1,0 +1,502 @@
+{
+	"info": {
+		"_postman_id": "9a338583-caa1-4995-8cd5-7a3d9eef0c8d",
+		"name": "6dvp-flix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UpVoteMovies",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/upvote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"upvote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovieInfo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DownVoteMovie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 40\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/downvote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"downvote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8070/v1/usermoviesservice/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"usermoviesservice",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToggleWatchLater",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id\": 6\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/v1/usermoviesservice/togglewatchlater",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"usermoviesservice",
+						"togglewatchlater"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToggleLike",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id\": 6\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/v1/usermoviesservice/togglelike",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"usermoviesservice",
+						"togglelike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserProfile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8070/v1/profilerservice/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"profilerservice",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateMovie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"likes\": 3.0,\n    \"views\": 40.0,\n    \"description\": \"Movie 50\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMoviesByGenre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/genre/drama",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"genre",
+						"drama"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddMovieView",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/addview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"addview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8070/v1/userservice/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"userservice",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetWatched",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userMovieIdentity\": {\n        \"user_id\": 1,\n        \"movie_id\": 7\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/v1/usermoviesservice/setwatched",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"usermoviesservice",
+						"setwatched"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMostViewsByGenre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/mostviews/genre/comedy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"mostviews",
+						"genre",
+						"comedy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetWatched",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8070/v1/profilerservice/watched/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"profilerservice",
+						"watched",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMostViews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/mostviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"mostviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BatchCreateUsers",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 1,\n        \"name\": \"Thales Gomes\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"John Doe\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Jane Doe\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Edilson Almeida\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Helton Lustosa\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Jailson Silva\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/v1/userservice/create/batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"userservice",
+						"create",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8070/v1/userservice/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"userservice",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BatchCreateMovies",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 1,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Horror Movie\",\n        \"description\": \"Just a horror movie\",\n        \"genre\": \"horror\"\n    },\n    {\n        \"id\": 2,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Horror Movie 2\",\n        \"description\": \"Just a horror movie\",\n        \"genre\": \"horror\"\n    },\n    {\n        \"id\": 3,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Horror Movie 3\",\n        \"description\": \"Just a horror movie\",\n        \"genre\": \"horror\"\n    },\n    {\n        \"id\": 4,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Action Movie\",\n        \"description\": \"Just a action movie\",\n        \"genre\": \"action\"\n    },\n    {\n        \"id\": 5,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Action Movie 2\",\n        \"description\": \"Just a action movie\",\n        \"genre\": \"action\"\n    },\n    {\n        \"id\": 6,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Action Movie 3\",\n        \"description\": \"Just a action movie\",\n        \"genre\": \"action\"\n    },\n    {\n        \"id\": 7,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Drama Movie\",\n        \"description\": \"Just a drama movie\",\n        \"genre\": \"drama\"\n    },\n    {\n        \"id\": 8,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Drama Movie 2\",\n        \"description\": \"Just a drama movie\",\n        \"genre\": \"drama\"\n    },\n    {\n        \"id\": 9,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Drama Movie 3\",\n        \"description\": \"Just a drama movie\",\n        \"genre\": \"drama\"\n    },\n    {\n        \"id\": 10,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Adventure Movie\",\n        \"description\": \"Just a adventure movie\",\n        \"genre\": \"adventure\"\n    },\n    {\n        \"id\": 11,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Adventure Movie 2\",\n        \"description\": \"Just a adventure movie\",\n        \"genre\": \"adventure\"\n    },\n    {\n        \"id\": 12,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Adventure Movie 3\",\n        \"description\": \"Just a adventure movie\",\n        \"genre\": \"adventure\"\n    },\n    {\n        \"id\": 13,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Fiction Movie\",\n        \"description\": \"Just a fiction movie\",\n        \"genre\": \"fiction\"\n    },\n    {\n        \"id\": 14,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Fiction Movie 2\",\n        \"description\": \"Just a fiction movie\",\n        \"genre\": \"fiction\"\n    },\n    {\n        \"id\": 15,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Fiction Movie 3\",\n        \"description\": \"Just a fiction movie\",\n        \"genre\": \"fiction\"\n    },\n    {\n        \"id\": 16,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Comedy Movie\",\n        \"description\": \"Just a comedy movie\",\n        \"genre\": \"comedy\"\n    },\n    {\n        \"id\": 17,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Comedy Movie 2\",\n        \"description\": \"Just a comedy movie\",\n        \"genre\": \"comedy\"\n    },\n    {\n        \"id\": 18,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Comedy Movie 3\",\n        \"description\": \"Just a comedy movie\",\n        \"genre\": \"comedy\"\n    },\n    {\n        \"id\": 19,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Romance Movie\",\n        \"description\": \"Just a romance movie\",\n        \"genre\": \"romance\"\n    },\n    {\n        \"id\": 20,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Romance Movie 2\",\n        \"description\": \"Just a romance movie\",\n        \"genre\": \"romance\"\n    },\n    {\n        \"id\": 21,\n        \"likes\": 0.0,\n        \"views\": 0.0,\n        \"name\": \"A Romance Movie 3\",\n        \"description\": \"Just a romance movie\",\n        \"genre\": \"romance\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/v1/movieservice/create/batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"v1",
+						"movieservice",
+						"create",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

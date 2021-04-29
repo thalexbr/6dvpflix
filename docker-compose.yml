@@ -1,0 +1,60 @@
+version: '3'
+services:
+  eurekaserver:
+    image: eurekaserver
+    ports: 
+      - 8761:8761
+    restart: always
+
+  zuulserver:
+    depends_on:
+      - eurekaserver
+    image: zuulserver
+    ports: 
+      - 8081:8080
+    restart: always
+
+  rabbitmq:
+    image: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - 5672:5672
+    restart: always
+
+  moviedb:
+    image: mariadb
+    ports:
+      - 3306:3306
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=6dvpflix
+      - MYSQL_DATABASE=moviedb
+
+  userdb:
+    image: mariadb
+    ports:
+      - 13306:3306
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=6dvpflix
+      - MYSQL_DATABASE=userdb
+
+  movieservice:
+    depends_on: 
+      - moviedb
+      - rabbitmq
+      - zuulserver
+    image: movieservice
+    ports:
+      - 8090:8090
+    restart: always
+
+  userservice:
+    depends_on: 
+      - userdb
+      - rabbitmq
+      - zuulserver
+    image: userservice
+    ports:
+      - 8070:8070
+    restart: always
