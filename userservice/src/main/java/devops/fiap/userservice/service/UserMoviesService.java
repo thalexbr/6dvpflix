@@ -3,12 +3,7 @@ package devops.fiap.userservice.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import devops.fiap.userservice.entity.UserMovieIdentity;
 import devops.fiap.userservice.entity.UserMovies;
@@ -20,9 +15,6 @@ public class UserMoviesService {
 
 	@Autowired
 	private UserMoviesRepository userMoviesRepository;
-		
-	@Autowired
-	private DiscoveryClient discoveryClient;
 
 
 	public List<UserMovies> getUserMovies (int userId) {
@@ -40,7 +32,6 @@ public class UserMoviesService {
 		
 		UserMovies newUserMovies = this.getUserMovie(userMovies.getUserMovieIdentity());
 		if(newUserMovies == null) {
-			System.out.println("######################SETTING UP A NEW USER MOVIE#######################");
 			userMovies.setWatched(true);
 		} else {
 			userMovies = newUserMovies;

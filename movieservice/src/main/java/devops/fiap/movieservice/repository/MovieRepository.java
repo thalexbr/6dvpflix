@@ -13,10 +13,6 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 	
 	public List<Movie> findByGenre(String genre);
 	
-	public List<Movie> findByGenreOrderByViewsDesc(String genre);
-	
-	public List<Movie> findByViewsGreaterThan(int views);	
-	
 	@Query(value = "SELECT DISTINCT genre FROM tbl_movie", nativeQuery = true)
 	public List<String> getGenres();
 	

@@ -36,7 +36,7 @@ public class MovieServiceController {
 	
 	@RequestMapping(value = "/create/batch",method = RequestMethod.PUT)
 	public ResponseEntity<?> batchCreate(@RequestBody List<Movie> movies) {
-		// Parte 1.  item 13.c
+
 		movies = movieService.batchCreate(movies);
 		return new ResponseEntity<>(movies, HttpStatus.OK);
 	}
@@ -61,28 +61,28 @@ public class MovieServiceController {
 	
 	@RequestMapping(value = "/upvote",method = RequestMethod.PUT)
 	public ResponseEntity<?> upVote(@RequestBody Movie movie) {
-		// Parte 1.  item 13.c
+
 		movie = movieService.upVote(movie);
 		return new ResponseEntity<>(movie, HttpStatus.OK);
 	}
 	
 	@RequestMapping(value = "/downvote",method = RequestMethod.PUT)
 	public ResponseEntity<?> downVote(@RequestBody Movie movie) {
-		// Parte 1.  item 13.c
+
 		movie = movieService.downVote(movie);
 		return new ResponseEntity<>(movie, HttpStatus.OK);
 	}
 	
 	@RequestMapping(value = "/addview",method = RequestMethod.PUT)
 	public ResponseEntity<?> addView(@RequestBody Movie movie) {
-		// Parte 1.  item 13.c
+
 		movie = movieService.addView(movie);
 		return new ResponseEntity<>(movie, HttpStatus.OK);
 	}
 	
 	@RequestMapping(value = "/create",method = RequestMethod.PUT)
 	public ResponseEntity<?> createMovie(@RequestBody Movie movie) {
-		// Parte 1.  item 13.c
+
 		movie = movieService.createMovie(movie);
 		return new ResponseEntity<>(movie, HttpStatus.OK);
 	}

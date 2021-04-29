@@ -3,30 +3,13 @@ package devops.fiap.userservice.entity;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "tbl_user_movies")
 public class UserMovies {
-	
-	/*@Id
-	@JsonProperty("id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	
-	@JsonProperty("user_id")
-	@Column(name = "user_id")
-	private int userId;
-	
-	@JsonProperty("movie_id")
-	@Column(name = "movie_id")
-	private int movieId;*/
 	
 	@EmbeddedId
 	private UserMovieIdentity userMovieIdentity;
