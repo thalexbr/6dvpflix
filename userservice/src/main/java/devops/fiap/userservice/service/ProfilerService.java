@@ -1,4 +1,4 @@
-package devops.fiap.profilerservice.service;
+package devops.fiap.userservice.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +11,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import devops.fiap.profilerservice.entity.Movie;
-import devops.fiap.profilerservice.entity.User;
-import devops.fiap.profilerservice.entity.UserMovies;
-import devops.fiap.profilerservice.vo.ProfilerComposerVO;
-import devops.fiap.profilerservice.vo.UserMoviesVO;
+import devops.fiap.userservice.entity.Movie;
+import devops.fiap.userservice.entity.User;
+import devops.fiap.userservice.entity.UserMovies;
+import devops.fiap.userservice.vo.ProfilerComposerVO;
+import devops.fiap.userservice.vo.UserMoviesVO;
 
 @Service
 public class ProfilerService {

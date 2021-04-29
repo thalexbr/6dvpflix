@@ -1,4 +1,4 @@
-package devops.fiap.profilerservice.controller;
+package devops.fiap.userservice.controller;
 
 import java.util.List;
 
@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import devops.fiap.profilerservice.entity.Movie;
-import devops.fiap.profilerservice.entity.UserMovies;
-import devops.fiap.profilerservice.service.ProfilerService;
-import devops.fiap.profilerservice.vo.ProfilerComposerVO;
-import devops.fiap.profilerservice.vo.UserMoviesVO;
+import devops.fiap.userservice.entity.Movie;
+import devops.fiap.userservice.entity.UserMovies;
+import devops.fiap.userservice.service.ProfilerService;
+import devops.fiap.userservice.vo.ProfilerComposerVO;
+import devops.fiap.userservice.vo.UserMoviesVO;
 
 @RestController
-@RequestMapping(value = "/v1/profilerservice")
+@RequestMapping(value = "/v1/userservice")
 public class ProfilerComposer {
 	
 	private static final boolean ALL_MOVIES = false;
@@ -26,16 +26,16 @@ public class ProfilerComposer {
 	
 
 	@Autowired
-	private ProfilerService profilerService;
+	private ProfilerService profileService;
 
 	@RequestMapping(value = "/{userId}", method = RequestMethod.GET)
 	public ProfilerComposerVO getUserMovies(@PathVariable(name = "userId") int userId) {
-		return profilerService.getProfileDetails(userId, ALL_MOVIES);
+		return profileService.getProfileDetails(userId, ALL_MOVIES);
 	}
 	
 	@RequestMapping(value = "/watched/{userId}", method = RequestMethod.GET)
 	public ProfilerComposerVO getUserMoviesWatched(@PathVariable(name = "userId") int userId) {
-		return profilerService.getProfileDetails(userId, WATCHED);
+		return profileService.getProfileDetails(userId, WATCHED);
 	}
 	
 
