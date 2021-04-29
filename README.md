@@ -1,7 +1,7 @@
+![workflow](https://github.com/thalexbr/6dvpflix/actions/workflows/main.yml/badge.svg)
 # FiapFlix
 > This is a basic project with student purposes. So, a set of services is implemented with intention for provide some  endpoints for streaming movies based on netflix.
 
-[![YourActionName Actions Status](https://github.com/thalexbr/6dvpflix/workflows/CI/badge.svg)](https://github.com/thalexbr/6dvpflix/actions)
 <!-- TODO: o que ele faz? breve descrição... -->
 
 
