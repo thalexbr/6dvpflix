@@ -1,4 +1,4 @@
-package devops.fiap.profilerservice.entity;
+package devops.fiap.userservice.entity;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;

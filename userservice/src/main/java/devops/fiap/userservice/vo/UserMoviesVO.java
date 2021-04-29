@@ -1,4 +1,4 @@
-package devops.fiap.profilerservice.vo;
+package devops.fiap.userservice.vo;
 
 public class UserMoviesVO {
 

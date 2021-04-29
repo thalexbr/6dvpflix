@@ -1,4 +1,4 @@
-package devops.fiap.profilerservice.controller;
+package devops.fiap.userservice.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import devops.fiap.profilerservice.entity.UserMovies;
-import devops.fiap.profilerservice.service.UserMoviesService;
+import devops.fiap.userservice.entity.UserMovies;
+import devops.fiap.userservice.service.UserMoviesService;
 
 @RestController
 @RequestMapping(value = "/v1/usermoviesservice")

@@ -1,15 +1,10 @@
+[![master Actions Status](https://github.com/thalexbr/6dvpflix/workflows/master/badge.svg)](https://github.com/thalexbr/6dvpflix/actions)
+
+
 # FiapFlix
 > This is a basic project with student purposes. So, a set of services is implemented with intention for provide some  endpoints for streaming movies based on netflix.
 
-<!-- TODO: badges -->
-<!-- [![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url] -->
-
 <!-- TODO: o que ele faz? breve descrição... -->
-
-
-![](header.png)
 
 ## Installation
 
