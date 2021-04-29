@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
-import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +22,27 @@ public class MovieService {
 	public Movie getMovie(int movieId) {
 		Movie movie = movieRepository.findById(movieId);
 		return movie;
+	}
+	
+	public Movie createMovie(Movie movie) {
+
+		movie.setLikes(0);
+		movie.setViews(0);
+		movieRepository.save(movie);
+
+		return movie;
+
+	}
+	
+	public List<Movie> getAllMovies(){
+		return movieRepository.findAll();
+	}
+	
+	public List<Movie> batchCreate(List<Movie> movies){
+		for(Movie movie : movies) {
+			movieRepository.save(movie);
+		}
+		return movies;
 	}
 
 	public List<Movie> getMoviesByGenre(String genre) {
@@ -75,15 +95,7 @@ public class MovieService {
 		return (movie);
 	}
 
-	public Movie createMovie(Movie movie) {
 
-		movie.setLikes(0);
-		movie.setViews(0);
-		movieRepository.save(movie);
-
-		return movie;
-
-	}
 	
 
 }

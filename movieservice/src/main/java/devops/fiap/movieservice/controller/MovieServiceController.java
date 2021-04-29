@@ -28,6 +28,19 @@ public class MovieServiceController {
 		return movie;
 	}
 	
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public List<Movie> getAllMovies() {
+		List<Movie> movies = movieService.getAllMovies();
+		return movies;
+	}
+	
+	@RequestMapping(value = "/create/batch",method = RequestMethod.PUT)
+	public ResponseEntity<?> batchCreate(@RequestBody List<Movie> movies) {
+		// Parte 1.  item 13.c
+		movies = movieService.batchCreate(movies);
+		return new ResponseEntity<>(movies, HttpStatus.OK);
+	}
+	
 	@RequestMapping(value = "/genre/{genre}", method = RequestMethod.GET)
 	public List<Movie> getMovie(@PathVariable(name = "genre") String genre) {
 		List<Movie> movies = movieService.getMoviesByGenre(genre);
