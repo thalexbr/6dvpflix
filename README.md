@@ -38,6 +38,8 @@ MICROSERVICES ARCHITECTURE / API / CONTAINERS
 
 FIAP (<https://www.fiap.com.br/>)
 
+Turma: 6DVP
+
 Team:
 
 ```
