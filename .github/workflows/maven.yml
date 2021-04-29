@@ -23,11 +23,8 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
 
-    - name: Build eurekaserver Maven
-      run: mvn -B /eurekaserver --file pom.xml
+    - name: Execute maven clean
+      run: make clean
 
-    - name: Build movieservice Maven
-      run: mvn -B /movieservice --file pom.xml
-    
-    - name: Build userservice Maven
-      run: mvn -B /userservice --file pom.xml
+    - name: Build docker images
+      run: make images
