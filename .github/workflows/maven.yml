@@ -5,10 +5,9 @@ on:
     branches: [ master ]
     types: [created]
 
-# Temporary disabled 
-  # pull_request:
-  #   branches: [ master ]
-  #   types: [created]
+  pull_request:
+    branches: [ master ]
+    types: [created]
 
 jobs:
   build:
