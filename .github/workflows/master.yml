@@ -7,7 +7,7 @@ on:
 
   pull_request:
     branches: [ master ]
-    types: [created]
+    types: [opened, reopened]
 
 jobs:
   build:
