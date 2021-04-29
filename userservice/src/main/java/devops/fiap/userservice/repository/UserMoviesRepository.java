@@ -14,4 +14,5 @@ public interface UserMoviesRepository extends JpaRepository<UserMovies, Integer>
 	
 	public UserMovies findByUserMovieIdentity(UserMovieIdentity userMovieIdentity);
 
+
 }

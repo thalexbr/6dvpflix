@@ -1,4 +1,4 @@
-package com.example.movieservice.entity;
+package devops.fiap.movieservice.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

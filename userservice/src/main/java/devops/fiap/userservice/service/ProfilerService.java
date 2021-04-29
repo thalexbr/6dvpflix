@@ -1,6 +1,7 @@
 package devops.fiap.userservice.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import devops.fiap.userservice.entity.User;
 import devops.fiap.userservice.entity.UserMovies;
 import devops.fiap.userservice.vo.ProfilerComposerVO;
 import devops.fiap.userservice.vo.UserMoviesVO;
+
 
 @Service
 public class ProfilerService {
@@ -58,6 +60,7 @@ public class ProfilerService {
 		return profilerComposerVO;
 
 	}
+
 	
 	private Movie getMovie(int movieId) {
 		RestTemplate restTemplate = new RestTemplate();

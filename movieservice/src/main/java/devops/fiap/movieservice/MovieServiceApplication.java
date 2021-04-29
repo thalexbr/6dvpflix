@@ -1,4 +1,4 @@
-package com.example.movieservice;
+package devops.fiap.movieservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

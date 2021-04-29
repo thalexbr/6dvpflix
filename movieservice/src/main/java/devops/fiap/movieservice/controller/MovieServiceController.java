@@ -1,4 +1,4 @@
-package com.example.movieservice.controller;
+package devops.fiap.movieservice.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.movieservice.entity.Movie;
-import com.example.movieservice.service.MovieService;
+import devops.fiap.movieservice.entity.Movie;
+import devops.fiap.movieservice.service.MovieService;
 
 
 @RestController
@@ -35,8 +35,14 @@ public class MovieServiceController {
 	}
 	
 	@RequestMapping(value = "/mostviews/genre/{genre}", method = RequestMethod.GET)
-	public List<Movie> getMostViewedMoviesByGenre(@PathVariable(name = "genre") String genre) {
-		List<Movie> movies = movieService.getMostViewedMoviesByGenre(genre);
+	public Movie getMostViewedMoviesByGenre(@PathVariable(name = "genre") String genre) {
+		Movie movies = movieService.getMostViewedMoviesByGenre(genre);
+		return movies;
+	}
+	
+	@RequestMapping(value = "/mostviews", method = RequestMethod.GET)
+	public List<Movie> getMostViewedMoviesByGenre() {
+		List<Movie> movies = movieService.getMostViewedMoviesByGenre();
 		return movies;
 	}
 	
