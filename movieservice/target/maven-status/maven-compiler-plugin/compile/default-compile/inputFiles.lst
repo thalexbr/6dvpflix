@@ -1,5 +1,5 @@
-/home/thales/Projetos/Netflix/movieservice/src/main/java/com/example/movieservice/controller/MovieServiceController.java
-/home/thales/Projetos/Netflix/movieservice/src/main/java/com/example/movieservice/service/MovieService.java
-/home/thales/Projetos/Netflix/movieservice/src/main/java/com/example/movieservice/repository/MovieRepository.java
-/home/thales/Projetos/Netflix/movieservice/src/main/java/com/example/movieservice/MovieServiceApplication.java
-/home/thales/Projetos/Netflix/movieservice/src/main/java/com/example/movieservice/entity/Movie.java
+/home/thales/Projetos/6dvpflix/movieservice/src/main/java/devops/fiap/movieservice/MovieServiceApplication.java
+/home/thales/Projetos/6dvpflix/movieservice/src/main/java/devops/fiap/movieservice/entity/Movie.java
+/home/thales/Projetos/6dvpflix/movieservice/src/main/java/devops/fiap/movieservice/repository/MovieRepository.java
+/home/thales/Projetos/6dvpflix/movieservice/src/main/java/devops/fiap/movieservice/controller/MovieServiceController.java
+/home/thales/Projetos/6dvpflix/movieservice/src/main/java/devops/fiap/movieservice/service/MovieService.java
