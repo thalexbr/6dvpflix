@@ -1,0 +1,29 @@
+name: master
+
+on:
+  release:
+    branches: [ master ]
+    types: [created]
+
+  pull_request:
+    branches: [ master ]
+    types: [opened, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Execute maven clean
+      run: make clean
+
+    - name: Build docker images
+      run: make images
