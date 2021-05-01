@@ -57,8 +57,8 @@ http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/genre/fiction
 ![Image](images/List-Move-By-Genre.png)
 
 
-7. Consultar detalhes de um filme
-_Nota: substituir `{movie-id}` pelo ID do filme_
+7. Consultar detalhes de um filme (_Nota: substituir `{movie-id}` pelo ID do filme_)
+
 
 ```
 http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/{movie-id}
@@ -69,7 +69,7 @@ http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/{movie-id}
 
 8. Votar em filmes que mais gostei
 
-*Chaveamento da Opção Gostar*
+**Chaveamento da Opção Gostar**
 
 ```
 http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/togglelike
@@ -78,7 +78,7 @@ http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/togglelike
 ![Image](images/Movie-Toggle-Like.png)
 
 
-*Gostar*
+**Gostar**
 
 ```
 http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/upvote
@@ -87,7 +87,7 @@ http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/upvote
 ![Image](images/Movie-Up-Vote.png)
 
 
-*Remover Gostar*
+**Remover Gostar**
 
 
 ```
@@ -134,7 +134,7 @@ http://<SEU-HOST>:8081/api/usersvc/v1/userservice/request/create
 
 13. Visualizar os filmes e séries que já foram assistidos
 
-*Definindo um filme do usuário como já assistido*
+**Definindo um filme do usuário como já assistido**
 
 
 ```
@@ -144,8 +144,7 @@ http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/setwatched
 ![Image](images/User-Movie-Set-Watched.png)
 
 
-*Visualização dos filmes já assistidos*
-_Nota: substituir `{user-id}` pelo ID do usuário_
+**Visualização dos filmes já assistidos** (_Nota: substituir `{user-id}` pelo ID do usuário_)
 
 
 ```
