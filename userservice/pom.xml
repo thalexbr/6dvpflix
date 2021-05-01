@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>devops.fiap</groupId>
 	<artifactId>userservice</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.0-build.46</version>
 	<name>userservice</name>
 	<description>6DVPFlix User Microservice</description>
 
