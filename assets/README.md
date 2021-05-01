@@ -10,7 +10,19 @@ Endpoints
 
 1. Consultar rotas do API Gateway
 
+```
+http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/create/batch
+```
+
+![Image](images/API-Gateway-Routes.png)
+
 2. Criar vários usuários em lote
+
+```
+http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/create/batch
+```
+
+![Image](localdoarquivo)
 
 3. Criar vários filmes em lote
 
