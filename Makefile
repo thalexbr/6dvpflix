@@ -21,6 +21,13 @@ endif
 default:
 	cat ./Makefile
 
+## Construir o pacote com maven local
+.PHONY: dev
+dev:
+	find . -name "pom.xml" -exec mvn versions:set -DnewVersion=${VERSION} -f '{}' \;
+	find . -name "pom.xml" -exec mvn clean package -f '{}' \;
+	# find . -name "pom.xml" -exec java -jar -Dapple.awt.UIElement="true" target/*.jar -h '{}' \;
+
 ## Construir o pacote com maven
 .PHONY: clean
 clean:
@@ -36,10 +43,11 @@ images:
 	docker build -f movieservice/Dockerfile -t movieservice:${VERSION} --build-arg VERSION=${VERSION} --build-arg JAR_FILE=movieservice/target/*.jar .
 	@echo "Generating docker image for userservice"
 	docker build -f userservice/Dockerfile -t userservice:${VERSION} --build-arg VERSION=${VERSION} --build-arg JAR_FILE=userservice/target/*.jar .
+	@echo "Generating docker image for zuulserver"
+	docker build -f zuulserver/Dockerfile -t zuulserver:${VERSION} --build-arg VERSION=${VERSION} --build-arg JAR_FILE=zuulserver/target/*.jar .
 
 run:
-	# TODO: locate default port and set  
-	# docker run -p 8080:8080  -p 8443:8443 spring-boot-java-example:latest
+	docker-compose up
 
 ## Rodar o build e subir aplicacao (WiP)
 .PHONY: up

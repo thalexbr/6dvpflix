@@ -11,13 +11,25 @@
 Install JDK11:
 
 ```
-Oracle. (<https://www.oracle.com/java/technologies/javase-jdk11-downloads.html>)
+[Oracle](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 ```
 
 Maven:
 
 ```
-Install maven. (<https://maven.apache.org/install.html>)
+[Install maven](https://maven.apache.org/install.html)
+```
+
+Docker compose:
+
+```
+[Install docker](https://docs.docker.com/engine/install/)
+```
+
+Docker compose:
+
+```
+[Install docker-compose](https://docs.docker.com/compose/install)
 ```
 
 ## Usage example
@@ -26,10 +38,23 @@ Install maven. (<https://maven.apache.org/install.html>)
 
 ## Development setup
 
-<!-- Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms. -->
+There are two ways to use:
+1. Run locally based on mvn build files
 
 ```sh
-make install
+make dev
+```
+
+2. Run using docker images
+
+```sh
+make up
+```
+
+For more type:
+
+```sh
+make help
 ```
 
 ## Meta
