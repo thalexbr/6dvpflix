@@ -26,7 +26,7 @@ Docker compose:
 
 ## Usage example
 
-
+[Usage guide](assets)
 
 ## Development setup
 
