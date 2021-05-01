@@ -26,6 +26,8 @@ Docker compose:
 
 ## Usage example
 
+Click below to get a list of all available endpoints and how to use them
+
 [Usage guide](assets)
 
 ## Development setup
