@@ -1,7 +1,7 @@
 version: '3'
 services:
   eurekaserver:
-    image: eurekaserver:0.0.0-build.47
+    image: eurekaserver:{VERSION}
     ports: 
       - 8761:8761
     restart: always
@@ -9,7 +9,7 @@ services:
   zuulserver:
     depends_on:
       - eurekaserver
-    image: zuulserver:0.0.0-build.47
+    image: zuulserver:{VERSION}
     ports: 
       - 8081:8080
     restart: always
@@ -44,7 +44,7 @@ services:
       - moviedb
       - rabbitmq
       - zuulserver
-    image: movieservice:0.0.0-build.47
+    image: movieservice:{VERSION}
     ports:
       - 8090:8090
     restart: always
@@ -54,7 +54,7 @@ services:
       - userdb
       - rabbitmq
       - zuulserver
-    image: userservice:0.0.0-build.47
+    image: userservice:{VERSION}
     ports:
       - 8070:8070
     restart: always
