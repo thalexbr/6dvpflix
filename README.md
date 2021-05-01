@@ -10,27 +10,19 @@
 
 Install JDK11:
 
-```
 [Oracle](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-```
 
 Maven:
 
-```
 [Install maven](https://maven.apache.org/install.html)
-```
 
 Docker compose:
 
-```
 [Install docker](https://docs.docker.com/engine/install/)
-```
 
 Docker compose:
 
-```
 [Install docker-compose](https://docs.docker.com/compose/install)
-```
 
 ## Usage example
 
