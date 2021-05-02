@@ -22,17 +22,16 @@ default:
 	cat ./Makefile
 
 ## Construir o pacote com maven local
-.PHONY: dev
-dev:
-	find . -name "pom.xml" -exec mvn versions:set -DnewVersion=${VERSION} -f '{}' \;
-	find . -name "pom.xml" -exec mvn clean package -f '{}' \;
-	# find . -name "pom.xml" -exec java -jar -Dapple.awt.UIElement="true" target/*.jar -h '{}' \;
-
-## Construir o pacote com maven
 .PHONY: clean
 clean:
-	$(call docker-run,find . -name "pom.xml" -exec mvn versions:set -DnewVersion=${VERSION} -f '{}' \;)
-	$(call docker-run,find . -name "pom.xml" -exec mvn clean package -f '{}' \;)
+	find . -name "pom.xml" -exec mvn versions:set -DnewVersion=${VERSION} -f '{}' \;
+	find . -name "pom.xml" -exec mvn clean package -f '{}' \;
+
+## Construir o pacote com maven
+#.PHONY: clean
+#clean:
+#	$(call docker-run,find . -name "pom.xml" -exec mvn versions:set -DnewVersion=${VERSION} -f '{}' \;)
+#	$(call docker-run,find . -name "pom.xml" -exec mvn clean package -f '{}' \;)
 
 ## Criar imagens do docker da aplicacao
 .PHONY: images
@@ -52,8 +51,12 @@ run:
 	docker-compose up -d
 
 ## Rodar o build e subir aplicacao (WiP)
-.PHONY: up
-up: clean images run
+#.PHONY: up
+#up: clean images run
+
+## Executar stack em docker-compose
+.PHONY: install
+install: clean images run
 
 ## Aprentacao deste help
 .PHONY: help

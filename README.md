@@ -24,9 +24,13 @@ Docker compose:
 
 [Install docker-compose](https://docs.docker.com/compose/install)
 
+** Ubuntu/Debian users can run the script _preparar.sh_ to download all dependencies **
+
 ## Usage example
 
+Click below to get a list of all available endpoints and how to use them
 
+[Usage guide](assets)
 
 ## Development setup
 
