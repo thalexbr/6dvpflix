@@ -2,40 +2,40 @@
 
 
 # FiapFlix
-> This is a basic project with student purposes. So, a set of services is implemented with intention for provide some  endpoints for streaming movies based on netflix.
+> This is a basic project with student purposes. So, a set of services is implemented with intention for provide some  endpoints for streaming movies based on Netflix.
 
 <!-- TODO: o que ele faz? breve descrição... -->
 
 ## Installation
 
-Install JDK11:
+**Install JDK11:**
 
 [Oracle](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 
-Maven:
+**Maven:**
 
 [Install maven](https://maven.apache.org/install.html)
 
-Docker compose:
+**Docker compose:**
 
 [Install docker](https://docs.docker.com/engine/install/)
 
-Docker compose:
+**Docker compose:**
 
 [Install docker-compose](https://docs.docker.com/compose/install)
 
 
-Debian/Ubuntu:
+**Debian/Ubuntu:**
 
-** Debian/Ubuntu users can run the script _setup.sh_ to download all dependencies above and configure then**
+Debian/Ubuntu users can run the script** `setup.sh` **to download all dependencies above and configure them.
 
-```sh
+```
 sh setup.sh
 ```
 
 ## Usage example
 
-Click below to get a list of all available endpoints and how to use them
+Click below to get a list of all available endpoints and how to use them.
 
 [Usage guide](assets)
 
@@ -47,18 +47,18 @@ make install
 ```
 
 Step by step:
-1. Build locally based on mvn build files
+1. Build locally based on mvn build files.
 
 ```sh
 make clean
 ```
 
-2. Create docker images(This step needs the step above to create .jar files)
+2. Create docker images(This step needs the step above to create .jar files).
 
 ```sh
 make images
 ```
-2. Run docker images(this step needs both of the above)
+3. Run docker images(this step needs both of the above).
 
 ```sh
 make run
