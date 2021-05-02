@@ -53,20 +53,6 @@ public class UserServiceController {
 		return new ResponseEntity<>(users, HttpStatus.OK);
 	}
 	
-	/*@RequestMapping(value = "/upvote",method = RequestMethod.PUT)
-	public ResponseEntity<?> upVote(@RequestBody User user) {
-		// Parte 1.  item 13.c
-		user = userService.upVote(user);
-		return new ResponseEntity<>(user, HttpStatus.OK);
-	}
-	
-	@RequestMapping(value = "/downvote",method = RequestMethod.PUT)
-	public ResponseEntity<?> downVote(@RequestBody User user) {
-		// Parte 1.  item 13.c
-		user = userService.downVote(user);
-		return new ResponseEntity<>(user, HttpStatus.OK);
-	}*/
-	
 	@RequestMapping(value = "/task/create",method = RequestMethod.PUT)
 	public ResponseEntity<?> createTask(@RequestBody TaskRequest taskRequest) {
 		// Parte 1.  item 13.c

@@ -1,14 +1,21 @@
 Test Guide / Guia de Testes
 ==============
 
-To perform testes it will be required to use Postman to send GET/PULL requests to the microservices
+To perform testes it will be required to use Postman to send GET/PULL requests to the microservices.
 
+Para efetuar os testes será necessário o uso do Postman para envio das chamadas GET/PUT para os microserviços.
 
-Para efetuar os testes será necessário o uso do Postman para envio das chamadas GET/PUT para os microserviços
-
-Replace `<SEU-HOST>` with your host IP, or use localhost in case you're performing local tests
+Replace `<SEU-HOST>` with your host IP, or use localhost in case you're performing local tests.
 
 Substitua `<SEU-HOST>` pelo IP do seu host, ou utilize localhost caso esteja fazendo testes locais.
+
+You can find some sample data for users and movies here: [Users](postman/BatchUsers.json) / [Movies](postman/BatchMovies.json).
+
+Você pode achar alguns dados de exemplo para usuários e filmes aqui: [Usuários](postman/BatchUsers.json) / [Filmes](postman/BatchMovies.json).
+
+There is also a POSTMAN file with the most used endpoints [here](postman/6dvp-flix.postman_collection.json).
+
+Também há um arquivo do POSTMAN com os endpoints mais usados [aqui](postman/6dvp-flix.postman_collection.json).
 
 
 
@@ -83,25 +90,6 @@ http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/togglelike
 ```
 
 ![Image](images/Movie-Toggle-Like.png)
-
-
-**Like / Gostar**
-
-```
-http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/upvote
-```
-
-![Image](images/Movie-Up-Vote.png)
-
-
-**Unlike / Remover Gostar**
-
-
-```
-http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/downvote
-```
-
-![Image](images/Movie-Down-Vote.png)
 
 
 9. Tag a movie to be watched later / Marcar um filme ou série para ser visto no futuro
