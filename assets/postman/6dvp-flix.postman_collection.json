@@ -60,6 +60,37 @@
 			"response": []
 		},
 		{
+			"name": "CreateTask",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"description\": \"We have a lot off bugs, stay safe... :) \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/usersvc/v1/userservice/task/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"v1",
+						"userservice",
+						"task",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "BatchCreateUsers APIGW",
 			"request": {
 				"method": "PUT",

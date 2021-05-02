@@ -1,7 +1,7 @@
 version: '3'
 services:
   eurekaserver:
-    image: eurekaserver:0.0.0-build.70
+    image: eurekaserver:1.0.0
     ports: 
       - 8761:8761
     restart: always
@@ -9,13 +9,13 @@ services:
   zuulserver:
     depends_on:
       - eurekaserver
-    image: zuulserver:0.0.0-build.70
+    image: zuulserver:1.0.0
     ports: 
       - 8081:8080
     restart: always
 
   zookeeper:
-    image: zookeeper:0.0.0-build.70
+    image: zookeeper:1.0.0
     hostname: zookeeper
     ports:
       - 2181:2181
@@ -24,7 +24,7 @@ services:
   kafka:
     depends_on:
       - zookeeper
-    image: kafka:0.0.0-build.70
+    image: kafka:1.0.0
     hostname: kafka
     ports:
       - 9092:9092
@@ -52,7 +52,7 @@ services:
       - moviedb
       - kafka
       - zuulserver
-    image: movieservice:0.0.0-build.70
+    image: movieservice:1.0.0
     ports:
       - 8090:8090
     restart: always
@@ -62,7 +62,7 @@ services:
       - userdb
       - kafka
       - zuulserver
-    image: userservice:0.0.0-build.70
+    image: userservice:1.0.0
     ports:
       - 8070:8070
     restart: always
