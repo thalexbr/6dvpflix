@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "9a338583-caa1-4995-8cd5-7a3d9eef0c8d",
-		"name": "homestudy-6dvp-flix",
+		"name": "6dvp-flix",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -43,10 +43,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://homestudy:8070/v1/userservice/create/batch",
+					"raw": "http://insert-your-host-here:8070/v1/userservice/create/batch",
 					"protocol": "http",
 					"host": [
-						"homestudy"
+						"insert-your-host-here"
 					],
 					"port": "8070",
 					"path": [
@@ -110,10 +110,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://homestudy:8090/v1/movieservice/create/batch",
+					"raw": "http://insert-your-host-here:8090/v1/movieservice/create/batch",
 					"protocol": "http",
 					"host": [
-						"homestudy"
+						"insert-your-host-here"
 					],
 					"port": "8090",
 					"path": [
