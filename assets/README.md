@@ -55,7 +55,7 @@ http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/list
 
 ![Image](images/List-All-Movies.png)
 
-6. Query movies from a specific genre (_Note: replace `{move-genre-string} with the genre in text format_) / Consultar filmes de um determinado gênero (_Nota: substituir `{move-genre-string} pelo gênero em formato texto_)
+6. Query movies from a specific genre (_Note: replace `{move-genre-string}` with the genre in text format_) / Consultar filmes de um determinado gênero (_Nota: substituir `{move-genre-string}` pelo gênero em formato texto_)
 
 ```
 http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/genre/{movie-genre-string}
