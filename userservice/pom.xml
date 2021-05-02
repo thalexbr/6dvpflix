@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>devops.fiap</groupId>
 	<artifactId>userservice</artifactId>
-	<version>0.0.0-build.47</version>
+	<version>0.0.0-build.70</version>
 	<name>userservice</name>
 	<description>6DVPFlix User Microservice</description>
 
@@ -25,6 +25,14 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-stream-kafka</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
