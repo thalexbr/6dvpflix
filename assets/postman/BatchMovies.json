@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Horror Movie",
+        "description": "Just a horror movie",
+        "genre": "horror"
+    },
+    {
+        "id": 2,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Horror Movie 2",
+        "description": "Just a horror movie",
+        "genre": "horror"
+    },
+    {
+        "id": 3,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Horror Movie 3",
+        "description": "Just a horror movie",
+        "genre": "horror"
+    },
+    {
+        "id": 4,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Action Movie",
+        "description": "Just a action movie",
+        "genre": "action"
+    },
+    {
+        "id": 5,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Action Movie 2",
+        "description": "Just a action movie",
+        "genre": "action"
+    },
+    {
+        "id": 6,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Action Movie 3",
+        "description": "Just a action movie",
+        "genre": "action"
+    },
+    {
+        "id": 7,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Drama Movie",
+        "description": "Just a drama movie",
+        "genre": "drama"
+    },
+    {
+        "id": 8,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Drama Movie 2",
+        "description": "Just a drama movie",
+        "genre": "drama"
+    },
+    {
+        "id": 9,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Drama Movie 3",
+        "description": "Just a drama movie",
+        "genre": "drama"
+    },
+    {
+        "id": 10,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Adventure Movie",
+        "description": "Just a adventure movie",
+        "genre": "adventure"
+    },
+    {
+        "id": 11,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Adventure Movie 2",
+        "description": "Just a adventure movie",
+        "genre": "adventure"
+    },
+    {
+        "id": 12,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Adventure Movie 3",
+        "description": "Just a adventure movie",
+        "genre": "adventure"
+    },
+    {
+        "id": 13,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Fiction Movie",
+        "description": "Just a fiction movie",
+        "genre": "fiction"
+    },
+    {
+        "id": 14,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Fiction Movie 2",
+        "description": "Just a fiction movie",
+        "genre": "fiction"
+    },
+    {
+        "id": 15,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Fiction Movie 3",
+        "description": "Just a fiction movie",
+        "genre": "fiction"
+    },
+    {
+        "id": 16,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Comedy Movie",
+        "description": "Just a comedy movie",
+        "genre": "comedy"
+    },
+    {
+        "id": 17,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Comedy Movie 2",
+        "description": "Just a comedy movie",
+        "genre": "comedy"
+    },
+    {
+        "id": 18,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Comedy Movie 3",
+        "description": "Just a comedy movie",
+        "genre": "comedy"
+    },
+    {
+        "id": 19,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Romance Movie",
+        "description": "Just a romance movie",
+        "genre": "romance"
+    },
+    {
+        "id": 20,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Romance Movie 2",
+        "description": "Just a romance movie",
+        "genre": "romance"
+    },
+    {
+        "id": 21,
+        "likes": 0.0,
+        "views": 0.0,
+        "name": "A Romance Movie 3",
+        "description": "Just a romance movie",
+        "genre": "romance"
+    }
+]

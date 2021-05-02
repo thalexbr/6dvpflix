@@ -97,29 +97,6 @@ public class MovieServiceController {
 		return movies;
 	}
 	
-	@ApiOperation(value="Marcar um filme como gostei")
-	@ApiResponses(value= {
-			@ApiResponse(code = 201, message="Voto computado com sucesso!"),			
-	})
-	@RequestMapping(value = "/upvote",method = RequestMethod.PUT)
-	public ResponseEntity<?> upVote(@RequestBody Movie movie) {
-
-		movie = movieService.upVote(movie);
-		return new ResponseEntity<>(movie, HttpStatus.OK);
-	}
-	
-	
-	@ApiOperation(value="Desmarcar um filme como gostei")
-	@ApiResponses(value= {
-			@ApiResponse(code = 201, message="Voto computado com sucesso!"),			
-	})
-	@RequestMapping(value = "/downvote",method = RequestMethod.PUT)
-	public ResponseEntity<?> downVote(@RequestBody Movie movie) {
-
-		movie = movieService.downVote(movie);
-		return new ResponseEntity<>(movie, HttpStatus.OK);
-	}
-	
 	@ApiOperation(value="Marcar um filme como assistido")
 	@ApiResponses(value= {
 			@ApiResponse(code = 201, message="Marcado com sucesso!"),			

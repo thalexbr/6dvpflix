@@ -10,6 +10,10 @@ Replace `<SEU-HOST>` with your host IP, or use localhost in case you're performi
 
 Substitua `<SEU-HOST>` pelo IP do seu host, ou utilize localhost caso esteja fazendo testes locais.
 
+Você pode achar alguns dados de exemplo para usuários e filmes aqui: [Usuários](BatchUsers.json) / [Filmes](BatchMovies.json)
+
+You can find some sample data for users and movies here: [Users](BatchUsers.json) / [Movies](BatchMovies.json)
+
 
 
 Endpoints
@@ -83,25 +87,6 @@ http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/togglelike
 ```
 
 ![Image](images/Movie-Toggle-Like.png)
-
-
-**Like / Gostar**
-
-```
-http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/upvote
-```
-
-![Image](images/Movie-Up-Vote.png)
-
-
-**Unlike / Remover Gostar**
-
-
-```
-http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/downvote
-```
-
-![Image](images/Movie-Down-Vote.png)
 
 
 9. Tag a movie to be watched later / Marcar um filme ou série para ser visto no futuro
