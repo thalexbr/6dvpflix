@@ -147,3 +147,13 @@ http://<SEU-HOST>:8081/api/usersvc/v1/profilerservice/watched/{user-id}
 ```
 
 ![Image](images/User-Movie-Get-Watched.png)
+
+
+14. Open a technical call  /  Abrir um chamado técnico de algum problema que está acontecendo
+
+
+```
+http://<SEU-HOST>:8081/api/usersvc/v1/userservice/task/create
+```
+
+![Image](images/Put-User-Task.png)

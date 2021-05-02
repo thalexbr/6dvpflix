@@ -6,13 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import devops.fiap.userservice.entity.User;
+import devops.fiap.userservice.entity.Task;
 import devops.fiap.userservice.repository.UserRepository;
+import devops.fiap.userservice.repository.TaskRepository;
 
 @Service
 public class UserService {
 
 	@Autowired
 	private UserRepository userRepository;
+
+	@Autowired
+	private TaskRepository taskRepository;
 
 	public User getUser(int userId){
 		User user = userRepository.findById(userId);
@@ -37,6 +42,14 @@ public class UserService {
 		}
 		
 		return newUsers;
+	}
+
+	public Task createTask(int idUser, String description) {
+		Task task = new Task(idUser, description);
+
+		taskRepository.save(task);
+		return task;
+		
 	}
 
 }

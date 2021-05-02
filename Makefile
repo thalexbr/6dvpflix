@@ -49,10 +49,17 @@ images:
 	@echo "Generating docker image for zookeeper"
 	docker build -f zookeeper/Dockerfile -t zookeeper:${VERSION} .
 
+## Executa o docker compose
+.PHONY: run
 run:
 	cp compose-file docker-compose.yml
 	sed -i 's/{VERSION}/${VERSION}/g' docker-compose.yml
 	docker-compose up -d
+
+## Para o docker compose
+.PHONY: stop
+stop:
+	docker-compose down
 
 ## Rodar o build e subir aplicacao (WiP)
 #.PHONY: up
