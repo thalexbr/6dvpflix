@@ -27,9 +27,9 @@ Docker compose:
 
 Debian/Ubuntu:
 
-** Debian/Ubuntu users can run the script _setup.sh_ to download all dependencies above and configure then**
+**Debian/Ubuntu users can run the script `_setup.sh_` to download all dependencies above and configure them**
 
-```sh
+```
 sh setup.sh
 ```
 
