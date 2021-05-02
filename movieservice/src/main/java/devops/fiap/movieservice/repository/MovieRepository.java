@@ -9,7 +9,7 @@ import devops.fiap.movieservice.entity.Movie;
 
 public interface MovieRepository extends JpaRepository<Movie, Integer> {
 
-	public Movie findById(int productId);
+	public Movie findById(int movieId);
 	
 	public List<Movie> findByGenre(String genre);
 	
