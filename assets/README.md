@@ -1,22 +1,22 @@
 Test Guide / Guia de Testes
 ==============
 
-To perform testes it will be required to use Postman to send GET/PULL requests to the microservices
+To perform testes it will be required to use Postman to send GET/PULL requests to the microservices.
 
+Para efetuar os testes será necessário o uso do Postman para envio das chamadas GET/PUT para os microserviços.
 
-Para efetuar os testes será necessário o uso do Postman para envio das chamadas GET/PUT para os microserviços
-
-Replace `<SEU-HOST>` with your host IP, or use localhost in case you're performing local tests
+Replace `<SEU-HOST>` with your host IP, or use localhost in case you're performing local tests.
 
 Substitua `<SEU-HOST>` pelo IP do seu host, ou utilize localhost caso esteja fazendo testes locais.
 
-Você pode achar alguns dados de exemplo para usuários e filmes aqui: [Usuários](postman/BatchUsers.json) / [Filmes](postman/BatchMovies.json)
+You can find some sample data for users and movies here: [Users](postman/BatchUsers.json) / [Movies](postman/BatchMovies.json).
 
-You can find some sample data for users and movies here: [Users](postman/BatchUsers.json) / [Movies](postman/BatchMovies.json)
+Você pode achar alguns dados de exemplo para usuários e filmes aqui: [Usuários](postman/BatchUsers.json) / [Filmes](postman/BatchMovies.json).
 
-Também há um arquivo do POSTMAN com os endpoints mais usados [aqui](postman/6dvp-flix.postman_collection.json)
+There is also a POSTMAN file with the most used endpoints [here](6dvp-flix.postman_collection.json).
 
-There is also a POSTMAN file with the most used endpoints [here](6dvp-flix.postman_collection.json)
+Também há um arquivo do POSTMAN com os endpoints mais usados [aqui](postman/6dvp-flix.postman_collection.json).
+
 
 
 Endpoints
