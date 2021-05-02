@@ -20,7 +20,7 @@ ENV PATH=${KAFKA_HOME}/bin:${PATH}
 
 RUN sed -i 's/localhost:2181/zookeeper:2181/g' $KAFKA_HOME/config/server.properties
 
-COPY startup.sh startup.sh
+COPY kafka/startup.sh startup.sh
 
 CMD ["bash","startup.sh"]
 

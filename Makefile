@@ -42,8 +42,10 @@ images:
 	docker build -f movieservice/Dockerfile -t movieservice:${VERSION} --build-arg VERSION=${VERSION} --build-arg JAR_FILE=movieservice/target/*.jar .
 	@echo "Generating docker image for userservice"
 	docker build -f userservice/Dockerfile -t userservice:${VERSION} --build-arg VERSION=${VERSION} --build-arg JAR_FILE=userservice/target/*.jar .
-	@echo "Generating docker image for zuulserver"
-	docker build -f zuulserver/Dockerfile -t zuulserver:${VERSION} --build-arg VERSION=${VERSION} --build-arg JAR_FILE=zuulserver/target/*.jar .
+	@echo "Generating docker image for kafka"
+	docker build -f kafka/Dockerfile -t kafka:${VERSION} .
+	@echo "Generating docker image for zookeeper"
+	docker build -f zookeeper/Dockerfile -t zookeeper:${VERSION} .
 
 run:
 	cp compose-file docker-compose.yml

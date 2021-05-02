@@ -20,6 +20,6 @@ ENV PATH=${ZOOKEEPER_HOME}/bin:${PATH}
 
 RUN mv $ZOOKEEPER_HOME/conf/zoo_sample.cfg $ZOOKEEPER_HOME/conf/zoo.cfg
 
-COPY startup.sh startup.sh
+COPY zookeeper/startup.sh startup.sh
 
 CMD ["bash","startup.sh"]

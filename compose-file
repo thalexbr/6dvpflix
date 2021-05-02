@@ -14,12 +14,20 @@ services:
       - 8081:8080
     restart: always
 
-  rabbitmq:
-    image: rabbitmq
-    hostname: rabbitmq
+  zookeeper:
+    image: zookeeper:{VERSION}
+    hostname: zookeeper
     ports:
-      - 5672:5672
+      - 2181:2181
     restart: always
+
+  kafka:
+    depends_on:
+      - zookeeper
+    image: kafka:{VERSION}
+    hostname: kafka
+    ports:
+      - 9092:9092
 
   moviedb:
     image: mariadb
@@ -42,7 +50,7 @@ services:
   movieservice:
     depends_on: 
       - moviedb
-      - rabbitmq
+      - kafka
       - zuulserver
     image: movieservice:{VERSION}
     ports:
@@ -52,7 +60,7 @@ services:
   userservice:
     depends_on: 
       - userdb
-      - rabbitmq
+      - kafka
       - zuulserver
     image: userservice:{VERSION}
     ports:
