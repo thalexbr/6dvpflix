@@ -38,6 +38,8 @@ clean:
 images:
 	@echo "Generating docker image for eurekaserver"
 	docker build -f eurekaserver/Dockerfile -t eurekaserver:${VERSION} --build-arg VERSION=${VERSION} --build-arg JAR_FILE=eurekaserver/target/*.jar .
+	@echo "Generating docker image for zuulserver"
+	docker build -f zuulserver/Dockerfile -t zuulserver:${VERSION} --build-arg VERSION=${VERSION} --build-arg JAR_FILE=eurekaserver/target/*.jar .
 	@echo "Generating docker image for movieservice"
 	docker build -f movieservice/Dockerfile -t movieservice:${VERSION} --build-arg VERSION=${VERSION} --build-arg JAR_FILE=movieservice/target/*.jar .
 	@echo "Generating docker image for userservice"
