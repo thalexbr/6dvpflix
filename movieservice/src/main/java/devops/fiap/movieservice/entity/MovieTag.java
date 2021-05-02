@@ -25,6 +25,8 @@ public class MovieTag {
 	public void setMovieTagId(MovieTagIdentity movieTagId) {
 		this.movieTagId = movieTagId;
 	}
+
+
 	
 	
 	

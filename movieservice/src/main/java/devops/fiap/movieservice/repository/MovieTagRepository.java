@@ -8,8 +8,8 @@ import devops.fiap.movieservice.entity.MovieTag;
 
 public interface MovieTagRepository extends JpaRepository<MovieTag, Integer> {
 
-	public List<MovieTag> findByMovieTagIdentityMovieId(int movieId);
+	public List<MovieTag> findByMovieTagIdMovieId(int movieId);
 
-	public List<MovieTag> findByMovieTagIdentityTagId(int tagId);
+	public List<MovieTag> findByMovieTagIdTagId(int tagId);
 
 }
