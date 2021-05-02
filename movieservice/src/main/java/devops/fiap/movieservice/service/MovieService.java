@@ -94,8 +94,4 @@ public class MovieService {
 		movieRepository.save(movie);
 		return (movie);
 	}
-
-
-	
-
 }

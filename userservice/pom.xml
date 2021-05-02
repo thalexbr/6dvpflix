@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>devops.fiap</groupId>
 	<artifactId>userservice</artifactId>
-	<version>0.0.0-build.47</version>
+	<version>0.0.0-build.51</version>
 	<name>userservice</name>
 	<description>6DVPFlix User Microservice</description>
 
@@ -21,7 +21,6 @@
 	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -50,11 +49,14 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.mariadb.jdbc</groupId>
 			<artifactId>mariadb-java-client</artifactId>
 			<version>1.5.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit-test</artifactId>
 		</dependency>
 	</dependencies>
 

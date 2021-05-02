@@ -8,14 +8,15 @@ import org.springframework.stereotype.Service;
 import devops.fiap.userservice.entity.UserMovieIdentity;
 import devops.fiap.userservice.entity.UserMovies;
 import devops.fiap.userservice.repository.UserMoviesRepository;
-
+import devops.fiap.userservice.component.MessageRunner;
+import devops.fiap.userservice.entity.Message;
 
 @Service
 public class UserMoviesService {
 
 	@Autowired
 	private UserMoviesRepository userMoviesRepository;
-
+	private MessageRunner messageRunner;
 
 	public List<UserMovies> getUserMovies (int userId) {
 		List<UserMovies> userMovies = userMoviesRepository.findByUserMovieIdentityUserId(userId);
@@ -38,8 +39,17 @@ public class UserMoviesService {
 			userMovies.setWatched(true);
 		}
 		
-		//Enviar evento para contador de views
+		//Sent message to the queue
+		UserMovieIdentity userMovieIdentity = userMovies.getUserMovieIdentity();
+		Message message = new Message(
+			userMovieIdentity.getMovieId(),
+			 userMovieIdentity.getUserId(),
+			  1, 
+			  false);
+
+		messageRunner.SentMessage(message);
 		
+		// Save data on database
 		userMoviesRepository.save(userMovies);
 		return userMovies;
 	}
