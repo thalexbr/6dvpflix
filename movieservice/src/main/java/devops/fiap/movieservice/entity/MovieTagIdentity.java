@@ -1,11 +1,13 @@
 package devops.fiap.movieservice.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class MovieTagIdentity {
+public class MovieTagIdentity implements Serializable{
 	
     @NotNull
     @Column(name = "movie_id")
