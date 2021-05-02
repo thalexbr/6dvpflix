@@ -17,6 +17,14 @@ public class MovieTag {
 		super();
 		this.movieTagId = movieTagId;
 	}
+	
+	
+
+	public MovieTag() {
+
+	}
+
+
 
 	public MovieTagIdentity getMovieTagId() {
 		return movieTagId;

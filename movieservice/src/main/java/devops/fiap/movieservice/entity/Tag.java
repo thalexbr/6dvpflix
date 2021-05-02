@@ -18,6 +18,12 @@ public class Tag {
 	private int tagId;
 	
 	private String tag;
+	
+	
+
+	public Tag() {
+
+	}
 
 	public Tag(int tagId, String tag) {
 		super();

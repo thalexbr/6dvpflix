@@ -40,6 +40,10 @@ public class MovieTagIdentity implements Serializable{
 	public void setTagId(int tagId) {
 		this.tagId = tagId;
 	}
+
+	public MovieTagIdentity() {
+
+	}
     
     
 

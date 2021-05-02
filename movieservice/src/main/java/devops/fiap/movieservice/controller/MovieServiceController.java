@@ -66,7 +66,7 @@ public class MovieServiceController {
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Palavra chave adicionada"),
 			@ApiResponse(code = 404, message = "Erro ao adicionar palavra-chave"), })
 	@RequestMapping(value = "/addtag", method = RequestMethod.PUT)
-	public ResponseEntity<?> addMovieTag(@PathVariable(name = "movietag") MovieTag movieTag) {
+	public ResponseEntity<?> addMovieTag(@RequestBody MovieTag movieTag) {
 		movieTag = movieTagService.addMovieTag(movieTag);
 		return new ResponseEntity<>(movieTag, HttpStatus.CREATED);
 	}
