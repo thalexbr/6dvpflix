@@ -27,7 +27,7 @@
 
 **Debian/Ubuntu:**
 
-Debian/Ubuntu users can run the script** `setup.sh` **to download all dependencies above and configure them.
+Debian/Ubuntu users can run the script `setup.sh` to download all dependencies above and configure them.
 
 ```
 sh setup.sh
