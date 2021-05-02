@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import devops.fiap.userservice.entity.User;
+import devops.fiap.userservice.entity.Task;
+import devops.fiap.userservice.entity.TaskRequest;
 import devops.fiap.userservice.service.UserService;
 import io.swagger.annotations.ApiOperation;
 
@@ -65,5 +67,11 @@ public class UserServiceController {
 		return new ResponseEntity<>(user, HttpStatus.OK);
 	}*/
 	
+	@RequestMapping(value = "/task/create",method = RequestMethod.PUT)
+	public ResponseEntity<?> createTask(@RequestBody TaskRequest taskRequest) {
+		// Parte 1.  item 13.c
+		Task task = userService.createTask(taskRequest.getIdUser(), taskRequest.getDescription());
 
+		return new ResponseEntity<>(task, HttpStatus.OK);
+	}
 }
