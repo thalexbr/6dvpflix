@@ -23,6 +23,7 @@ public class UserMoviesController {
 	@Autowired
 	private UserMoviesService userMoviesService;
 
+	
 	@RequestMapping(value = "/{userId}", method = RequestMethod.GET)
 	public List<UserMovies> getUserMovies(@PathVariable(name = "userId") int userId) {
 		

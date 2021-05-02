@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import devops.fiap.userservice.entity.User;
 import devops.fiap.userservice.service.UserService;
+import io.swagger.annotations.ApiOperation;
 
 
 @RestController
@@ -35,6 +36,7 @@ public class UserServiceController {
 		return new ResponseEntity<>(user, HttpStatus.OK);
 	}
 	
+	@ApiOperation(value="Listar todos os usuários")
 	@RequestMapping(value = "/list",method = RequestMethod.GET)
 	public ResponseEntity<?> getAllUsers() {
 		// Parte 1.  item 13.c
