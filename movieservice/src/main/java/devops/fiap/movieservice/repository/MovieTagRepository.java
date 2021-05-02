@@ -10,6 +10,6 @@ public interface MovieTagRepository extends JpaRepository<MovieTag, Integer> {
 
 	public List<MovieTag> findByMovieTagIdentityMovieId(int movieId);
 
-	public List<MovieTag> findMovieTagIdentityTagId(int tagId);
+	public List<MovieTag> findByMovieTagIdentityTagId(int tagId);
 
 }

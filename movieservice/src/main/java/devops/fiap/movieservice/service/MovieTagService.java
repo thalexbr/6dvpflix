@@ -31,7 +31,7 @@ public class MovieTagService {
 		Tag tag = tagRepository.findByTag(tagName);
 		List<Movie> movies = new ArrayList<>();
 		
-		List<MovieTag> movieTags = movieTagRepository.findMovieTagIdentityTagId(tag.getTagId());
+		List<MovieTag> movieTags = movieTagRepository.findByMovieTagIdentityTagId(tag.getTagId());
 		
 		for(MovieTag movieTag : movieTags) {
 			
