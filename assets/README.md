@@ -10,9 +10,9 @@ Replace `<SEU-HOST>` with your host IP, or use localhost in case you're performi
 
 Substitua `<SEU-HOST>` pelo IP do seu host, ou utilize localhost caso esteja fazendo testes locais.
 
-Você pode achar alguns dados de exemplo para usuários e filmes aqui: [Usuários](BatchUsers.json) / [Filmes](BatchMovies.json)
+Você pode achar alguns dados de exemplo para usuários e filmes aqui: [Usuários](postman/BatchUsers.json) / [Filmes](postman/BatchMovies.json)
 
-You can find some sample data for users and movies here: [Users](BatchUsers.json) / [Movies](BatchMovies.json)
+You can find some sample data for users and movies here: [Users](postman/BatchUsers.json) / [Movies](postman/BatchMovies.json)
 
 
 
