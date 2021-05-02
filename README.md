@@ -41,12 +41,12 @@ Click below to get a list of all available endpoints and how to use them
 
 ## Development setup
 
-# Build and run all project:
+Build and run all project:
 ```sh
 make install
 ```
 
-# Step by step:
+Step by step:
 1. Build locally based on mvn build files
 
 ```sh
