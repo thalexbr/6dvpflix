@@ -34,17 +34,27 @@ Click below to get a list of all available endpoints and how to use them
 
 ## Development setup
 
-There are two ways to use:
-1. Run locally based on mvn build files
-
-```sh
-make dev
-```
-
-2. Run using docker images
-
+# Build and run all project:
 ```sh
 make install
+```
+
+# Step by step:
+1. Build locally based on mvn build files
+
+```sh
+make clean
+```
+
+2. Create docker images(This step needs the step above to create .jar files)
+
+```sh
+make images
+```
+2. Run docker images(this step needs both of the above)
+
+```sh
+make run
 ```
 
 For more type:
