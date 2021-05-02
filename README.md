@@ -24,7 +24,7 @@ Docker compose:
 
 [Install docker-compose](https://docs.docker.com/compose/install)
 
-** Ubuntu/Debian users can run the script _preparar.sh_ to download all dependencies **
+** Ubuntu/Debian users can run the script _setup.sh_ to download all dependencies **
 
 ## Usage example
 
@@ -44,7 +44,7 @@ make dev
 2. Run using docker images
 
 ```sh
-make up
+make install
 ```
 
 For more type:
