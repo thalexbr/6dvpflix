@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.235.192.132:8081/actuator/routes",
+					"raw": "http://localhost:8081/actuator/routes",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -43,10 +43,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://insert-your-host-here:8070/v1/userservice/create/batch",
+					"raw": "http://localhost:8070/v1/userservice/create/batch",
 					"protocol": "http",
 					"host": [
-						"insert-your-host-here"
+						"localhost"
 					],
 					"port": "8070",
 					"path": [
@@ -74,7 +74,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.80.5.184:8081/api/usersvc/v1/userservice/create/batch",
+					"raw": "http://localhost:8081/api/usersvc/v1/userservice/create/batch",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -110,10 +110,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://insert-your-host-here:8090/v1/movieservice/create/batch",
+					"raw": "http://localhost:8090/v1/movieservice/create/batch",
 					"protocol": "http",
 					"host": [
-						"insert-your-host-here"
+						"localhost"
 					],
 					"port": "8090",
 					"path": [
@@ -141,7 +141,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.80.5.184:8081/api/moviesvc/v1/movieservice/create/batch",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/create/batch",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -168,7 +168,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.80.5.184:8081/api/usersvc/v1/userservice/list",
+					"raw": "http://localhost:8081/api/usersvc/v1/userservice/list",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -194,7 +194,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/moviesvc/v1/movieservice/list",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/list",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -220,7 +220,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/moviesvc/v1/movieservice/genre/fiction",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/genre/fiction",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -254,7 +254,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/moviesvc/v1/movieservice/2",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/2",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -289,7 +289,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/usersvc/v1/usermoviesservice/togglelike",
+					"raw": "http://localhost:8081/api/usersvc/v1/usermoviesservice/togglelike",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -324,7 +324,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/moviesvc/v1/movieservice/upvote",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/upvote",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -359,7 +359,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/moviesvc/v1/movieservice/downvote",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/downvote",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -394,7 +394,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/usersvc/v1/usermoviesservice/togglewatchlater",
+					"raw": "http://localhost:8081/api/usersvc/v1/usermoviesservice/togglewatchlater",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -420,7 +420,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/moviesvc/v1/movieservice/mostviews",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/mostviews",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -446,7 +446,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/moviesvc/v1/movieservice/mostviews/genre/fiction",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/mostviews/genre/fiction",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -483,7 +483,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/usersvc/v1/usermoviesservice/setwatched",
+					"raw": "http://localhost:8081/api/usersvc/v1/usermoviesservice/setwatched",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -509,7 +509,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.235.192.132:8081/api/usersvc/v1/profilerservice/watched/3",
+					"raw": "http://localhost:8081/api/usersvc/v1/profilerservice/watched/3",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -536,7 +536,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.80.5.184:8081/api/usersvc/v1/profilerservice/3",
+					"raw": "http://localhost:8081/api/usersvc/v1/profilerservice/3",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -562,7 +562,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.80.5.184:8081/api/usersvc/v1/usermoviesservice/1",
+					"raw": "http://localhost:8081/api/usersvc/v1/usermoviesservice/1",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -597,7 +597,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.80.5.184:8081/api/moviesvc/v1/movieservice/create",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/create",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -632,7 +632,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://3.80.5.184:8081/api/moviesvc/v1/movieservice/addview",
+					"raw": "http://localhost:8081/api/moviesvc/v1/movieservice/addview",
 					"protocol": "http",
 					"host": [
 						"3",
@@ -658,7 +658,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://3.80.5.184:8081/api/usersvc/v1/userservice/1",
+					"raw": "http://localhost:8081/api/usersvc/v1/userservice/1",
 					"protocol": "http",
 					"host": [
 						"3",

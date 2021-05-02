@@ -14,6 +14,9 @@ Você pode achar alguns dados de exemplo para usuários e filmes aqui: [Usuário
 
 You can find some sample data for users and movies here: [Users](postman/BatchUsers.json) / [Movies](postman/BatchMovies.json)
 
+Também há um arquivo do POSTMAN com os endpoints mais usados [aqui](postman/6dvp-flix.postman_collection.json)
+
+There is also a POSTMAN file with the most used endpoints [here](6dvp-flix.postman_collection.json)
 
 
 Endpoints
