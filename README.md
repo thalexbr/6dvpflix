@@ -24,7 +24,13 @@ Docker compose:
 
 [Install docker-compose](https://docs.docker.com/compose/install)
 
-** Ubuntu/Debian users can run the script _setup.sh_ to download all dependencies **
+
+Debian/Ubuntu:
+** Debian/Ubuntu users can run the script _setup.sh_ to download all dependencies above and configure then**
+
+```sh
+sh setup.sh
+```
 
 ## Usage example
 
