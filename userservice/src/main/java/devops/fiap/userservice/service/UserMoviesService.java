@@ -16,6 +16,7 @@ public class UserMoviesService {
 
 	@Autowired
 	private UserMoviesRepository userMoviesRepository;
+	@Autowired
 	private MessageRunner messageRunner;
 
 	public List<UserMovies> getUserMovies (int userId) {

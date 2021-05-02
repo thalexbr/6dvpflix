@@ -33,7 +33,7 @@ public class MovieListenerService {
   
     @Bean
     Binding binding(Queue queue, TopicExchange exchange) {
-      return BindingBuilder.bind(queue).to(exchange).with("fiap.movieservice.service");
+      return BindingBuilder.bind(queue).to(exchange).with("fdevops.fiap.#");
     }
 
     @Bean 

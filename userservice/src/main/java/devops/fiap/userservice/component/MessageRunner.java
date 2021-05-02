@@ -24,7 +24,7 @@ public class MessageRunner {
     this.receiver.setMessage(message);
 
     // Convert message and sent to rabbit
-    rabbitTemplate.convertAndSend("movies-exchange", "foo.bar.baz", receiver);
+    rabbitTemplate.convertAndSend("movies-exchange", "devops.fiap.user", receiver);
     try {
       receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
     }catch(Exception e){
