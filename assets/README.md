@@ -98,7 +98,7 @@ http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/togglelike
 http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/togglewatchlater
 ```
 
-![Image](images/Get-Movies-By-Keyword.png)
+![Image](images/Movie-Toggle-Watch-Later.png)
 
 10. Query a movie by keyword / Buscar um filme por palavra-chave
 
@@ -106,7 +106,7 @@ http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/togglewatchlater
 http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/listbytag/{tag}
 ```
 
-![Image](images/Movie-Search-Keyword.png)
+![Image](images/Get-Movies-By-Keyword.png)
 
 
 11. Display most viewed movies by genre / Exibir os filmes mais vistos por categorias
