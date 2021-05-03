@@ -98,12 +98,12 @@ http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/togglelike
 http://<SEU-HOST>:8081/api/usersvc/v1/usermoviesservice/togglewatchlater
 ```
 
-![Image](images/Movie-Toggle-Watch-Later.png)
+![Image](images/Get-Movies-By-Keyword.png)
 
 10. Query a movie by keyword / Buscar um filme por palavra-chave
 
 ```
-http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/keyword
+http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/listbytag/{tag}
 ```
 
 ![Image](images/Movie-Search-Keyword.png)
