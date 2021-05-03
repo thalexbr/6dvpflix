@@ -17,7 +17,20 @@ There is also a POSTMAN file with the most used endpoints [here](postman/6dvp-fl
 
 Também há um arquivo do POSTMAN com os endpoints mais usados [aqui](postman/6dvp-flix.postman_collection.json).
 
+Swagger UI
+----------
 
+Use the links below to access the Swagger UI with the mapped endpoints
+
+Use os links abaixo para acessar a UI do Swagger com os endpoints mapeados
+
+** User Microservice / Microserviço de usuários **
+
+`http://<SEU-HOST>:8070/swagger-ui.html`
+
+** Movie Microservice / Microserviço de filmes **
+
+`http://<SEU-HOST>:8090/swagger-ui.html`
 
 Endpoints
 ---------
