@@ -118,13 +118,13 @@ http://<SEU-HOST>:8081/api/moviesvc/v1/movieservice/mostviews
 ![Image](images/Movie-Most-Views-By-Genre.png)
 
 
-12. Create a service request for an ongoing problem / Abrir um chamado técnico de algum problema que está acontecendo
+12. Open a technical call  /  Abrir um chamado técnico de algum problema que está acontecendo
 
 ```
-http://<SEU-HOST>:8081/api/usersvc/v1/userservice/request/create
+http://<SEU-HOST>:8081/api/usersvc/v1/userservice/task/create
 ```
 
-![Image](images/User-Service-Request-Create.png)
+![Image](images/Put-User-Task.png)
 
 
 13. Query movies and series that have already been watched / Visualizar os filmes e séries que já foram assistidos
@@ -147,13 +147,3 @@ http://<SEU-HOST>:8081/api/usersvc/v1/profilerservice/watched/{user-id}
 ```
 
 ![Image](images/User-Movie-Get-Watched.png)
-
-
-14. Open a technical call  /  Abrir um chamado técnico de algum problema que está acontecendo
-
-
-```
-http://<SEU-HOST>:8081/api/usersvc/v1/userservice/task/create
-```
-
-![Image](images/Put-User-Task.png)
